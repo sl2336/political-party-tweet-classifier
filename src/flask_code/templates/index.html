@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <h1 style="text-align:center">Welcome to my Democratic vs. Republican Tweet classifier!</h1>
+        <p style="text-align:center;">
+            <img src = "{{url_for('static', filename='dems_vs_reps.jpeg')}}" alt="Democrats vs Republicans Homepage"/>
+        </p>
+            <!--this form tag specifies that this form "posts" inputed
+        information to "/request" route, which in the flask code we can
+        listen for requests to this route and perform operations-->
+        <form style="text-align:center" action="/classify" method="post">
+            <input name="user_inputed_tweet" placeholder="i.e. I believe in Healthcare for all!" type=text style="width: 400px; height: 50px; text-align:left">
+            <input type="submit" value="Classify">
+        </form>
+{% endblock %}

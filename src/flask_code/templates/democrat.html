@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <h1 style="text-align:center;">Your tweet leans Democrat</h1>
+        <p style="text-align:center; background-color: lightskyblue;">
+            <img src = "{{url_for('static', filename='democrat.jpeg')}}" alt="Democratic tweet"/>
+        </p>
+{% endblock %}
